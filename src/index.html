@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>toolbox</title>
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <div id="maincontent">
+                <div id="tunerpage">
+                    <div id="tunerview">
+                        <canvas id="tunerbackground"></canvas>
+                        <div id="resultcontainer" class="debugme">
+                            <span id="higherdiff">(+10c)</span>
+                            <span id="higherfreq">400.23hz</span>
+                            <span id="detectednote">F#4</span>
+                            <span id="lowerfreq"> </span>
+                            <span id="lowerdiff"> </span>
+                        </div>
+                    </div>
+                    <div id="params">
+                        <div class="param debugme">
+                            Temperment: Equal
+                        </div>
+                        <div class="param debugme">
+                            A4 = 440
+                        </div>
+                        <div class="param debugme">
+                            Transpose: F
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div id="bottombar">
+                <div class="barmember debugme">
+                    Tuner
+                </div>
+                <div class="barmember debugme">
+                    Metronome
+                </div>
+                <div class="barmember debugme">
+                    Settings
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./libs/jquery.js"></script>
+<!--    <script src="./libs/wad.js"></script> -->
+    <script src="./main.js"></script>
+</html>
