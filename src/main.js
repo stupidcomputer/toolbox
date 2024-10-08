@@ -1,7 +1,8 @@
 function clickhandler() {
     const voice = new Wad({source: 'mic'});
     const tuner = new Wad.Poly();
-    const pitchoutput = document.getElementById("pitch");
+    const pitchoutput = document.getElementById("higherfreq");
+    const noteoutput = document.getElementById("detectednote");
 
     tuner.setVolume(0);
     tuner.add(voice);
@@ -12,7 +13,17 @@ function clickhandler() {
 
     const logPitch = function() {
         console.log(tuner.pitch);
-        pitch.innerHTML = tuner.pitch;
+        let pitch = tuner.pitch;
+        if (pitch === undefined) {
+            pitch = "??";
+        } 
+        
+        let note = tuner.noteName;
+        if(note === undefined) {
+            note = "??";
+        }
+        pitchoutput.innerHTML = pitch;
+        noteoutput.innerHTML = note;
         requestAnimationFrame(logPitch);
     };
     logPitch();
